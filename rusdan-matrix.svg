@@ -79,7 +79,7 @@
   <text x="10" y="24" class="cli-prompt">
     <tspan fill="var(--accent-cyan)" font-weight="600">~ $ </tspan>
     <tspan fill="var(--text-primary)" font-weight="500">hexdump -C kernel.bin </tspan>
-    <tspan fill="var(--text-muted)">// morphing to silicon die...</tspan>
+    <tspan fill="var(--text-muted)"></tspan>
   </text>
 
   <!-- LAYER 1: HEX DUMP MATRIX (Active 0s - 4.2s) -->
