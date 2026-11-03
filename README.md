@@ -5,11 +5,14 @@
 # Rusdan Lamsa (`@gxmngi`)
 
 > **Systems & Full-Stack Software Engineer**  
+> Ex-SWE Intern @ **MFEC** • IT @ **Walailak University**  
 > Focused on Distributed Systems, Storage Engine Architecture, and Cloud Infrastructure Platforms.  
 > Engineering from first principles with **Go**, **Rust**, and **TypeScript**.
 
+[![MFEC Intern](https://img.shields.io/badge/Experience-SWE%20Intern%20%40%20MFEC-0052cc?style=flat-square)](https://www.mfec.co.th/)
+[![Walailak University](https://img.shields.io/badge/Education-IT%20%40%20Walailak%20Univ-orange?style=flat-square)](https://www.wu.ac.th/)
+[![Stack](https://img.shields.io/badge/Stack-Go%20%7C%20Rust%20%7C%20TypeScript-007acc?style=flat-square)](https://github.com/gxmngi)
 [![GitHub followers](https://img.shields.io/github/followers/gxmngi?label=Followers&style=flat-square&color=24292e)](https://github.com/gxmngi)
-[![Top Languages](https://img.shields.io/badge/Stack-Go%20%7C%20Rust%20%7C%20TypeScript-007acc?style=flat-square)](https://github.com/gxmngi)
 [![Status](https://img.shields.io/badge/Status-Open%20to%20Opportunities-success?style=flat-square)](https://github.com/gxmngi)
 
 ---
