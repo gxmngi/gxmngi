@@ -1,51 +1,14 @@
-<div align="center">
-  <img src="./rusdan-matrix.svg" alt="Rusdan Systems Architecture" width="100%" />
-</div>
+![gxmngi / ใต้ฝา — an exploded desktop computer with an orange Thai warranty sticker on its lid](assets/under-the-lid.jpg)
 
-# Rusdan Lamsa (`@gxmngi`)
+**I wanted to know what `git commit` writes to disk. So I built it.**
 
-> **Systems & Full-Stack Software Engineer**  
-> Ex-SWE Intern @ **MFEC** • IT @ **Walailak University**  
-> Focused on Distributed Systems, Storage Engine Architecture, and Cloud Infrastructure Platforms.  
-> Engineering from first principles with **Go**, **Rust**, and **TypeScript**.
+ผมชื่อ Rusdan ครับ เวลาใช้เครื่องมือแล้วสงสัยว่าข้างในมันทำงานยังไง ผมชอบลองเขียนส่วนนั้นขึ้นมาเอง
 
-[![MFEC Intern](https://img.shields.io/badge/Experience-SWE%20Intern%20%40%20MFEC-0052cc?style=flat-square)](https://www.mfec.co.th/)
-[![Walailak University](https://img.shields.io/badge/Education-IT%20%40%20Walailak%20Univ-orange?style=flat-square)](https://www.wu.ac.th/)
-[![Stack](https://img.shields.io/badge/Stack-Go%20%7C%20Rust%20%7C%20TypeScript-007acc?style=flat-square)](https://github.com/gxmngi)
-[![GitHub followers](https://img.shields.io/github/followers/gxmngi?label=Followers&style=flat-square&color=24292e)](https://github.com/gxmngi)
-[![Status](https://img.shields.io/badge/Status-Open%20to%20Opportunities-success?style=flat-square)](https://github.com/gxmngi)
+### เปิดฝาดู
 
----
+- ตอนพิมพ์ `git commit` อะไรถูกเขียนลงดิสก์? ลองไล่จากไฟล์หนึ่งไฟล์ไปถึง blob, tree และ commit ใน [minigit-py · Python](https://github.com/gxmngi/minigit-py)
+- ถ้าไฟดับกลางคัน ฐานข้อมูลรู้ได้ยังไงว่าต้องกู้อะไร? เปิดดู write-ahead log กับหน้า B+Tree ใน [lithos-db · Rust](https://github.com/gxmngi/lithos-db)
+- ไฟล์เดียวประกอบกลับมาจากหลาย peer ได้ยังไง? ตามดูตั้งแต่ขอบล็อกแรกจนตรวจ hash ของแต่ละชิ้นใน [vortex-torrent · Go](https://github.com/gxmngi/vortex-torrent)
+- จาก `git push` ถึง URL ที่เปิดได้ เกิดอะไรขึ้นระหว่างทาง? ตามงานจากคิว build เข้า container จนถึง reverse proxy ใน [stratus-cloud · Go & TypeScript](https://github.com/gxmngi/stratus-cloud)
 
-## 🏛️ Core Architectural Pillars & Selected Systems
-
-Below is an overview of core production-grade and systems-level projects engineered from first principles:
-
-| System / Project | Domain & Stack | Architectural Mechanism & Highlights | Benchmarks / Invariants |
-| :--- | :--- | :--- | :--- |
-| [**Stratus Cloud**](https://github.com/gxmngi/stratus-cloud) | **Cloud PaaS & Orchestrator**<br>`Go` `Next.js 15` `Docker` `Redis` | • Ephemeral Docker sandboxing (`CapDrop: ALL`, `PidsLimit: 256`, 1GB RAM quota)<br>• In-memory `O(1)` Go Edge Reverse Proxy with Redis Pub/Sub routing<br>• Resilient task queue via Redis Streams (`XADD`/`XAUTOCLAIM`)<br>• Real-time log pipeline to WebSockets & embedded `xterm.js`<br>• 1-Click zero-downtime blue-green aliases & atomic rollback | Sub-millisecond proxy routing, zero leaked resources, scale-to-zero serverless auto-sleep |
-| [**LithosDB**](https://github.com/gxmngi/lithos-db) | **On-Disk Database Engine**<br>`Rust` *(Zero external crates)* | • 4096-Byte Slotted-Page hardware virtual memory alignment<br>• Dynamic 50/50 B+Tree node splitting & leaf pointer elevation<br>• Write-Ahead Logging (WAL) with 64-bit FNV-1a checksum frames<br>• Automatic dirty crash recovery on boot (ACID durability)<br>• Interactive REPL with ASCII `.btree` visualizer | **151,226 QPS** Point Search (6.61 μs latency)<br>**4.27M recs/sec** linked-leaf scan<br>Synchronous WAL `fsync` |
-| [**VortexTorrent**](https://github.com/gxmngi/vortex-torrent) | **P2P Network Protocol**<br>`Go` *(Standard library only)* | • BEP 0003 BitTorrent state machine & TCP wire protocol<br>• Zero-copy raw bencode byte slicing for 20-byte SHA-1 `info_hash`<br>• Pipelined 16KB block requests (`MaxBacklog = 5`) for saturated pipes<br>• End-Game Mode tail-latency cancellation for lingering pieces<br>• Concurrent multi-peer worker pool using native Goroutines & channels | Wire-speed swarm downloads, 100% cryptographic piece validation |
-| [**MiniGit**](https://github.com/gxmngi/minigit-py) | **VCS Internals**<br>`Python` | • Git plumbing engine: Blobs, Trees, Commits, and Tag objects<br>• SHA-1 content-addressable storage & zlib byte-level compression<br>• Branching, checkout, and commit graph traversal | Deterministic Git object hash parity with native Git CLI |
-
----
-
-## 🛠️ Technical Competencies
-
-- **Systems & Concurrency:** Rust (Memory Safety, RAII, Systems Programming), Go (Goroutines, Channels, Low-latency I/O), C/C++
-- **Full-Stack & Web Platforms:** TypeScript, Next.js 15 (App Router, Server Components), Node.js, WebSockets, Tailwind CSS
-- **Data & Storage Internals:** On-disk B+Tree engines, Slotted-Page architecture, WAL, PostgreSQL, SQLite, Redis (Streams & Pub/Sub)
-- **Infrastructure & Sandbox Security:** Docker Engine API, Linux cgroups/namespaces, Capability Dropping, Reverse Proxies, CI/CD GitHub Actions
-
----
-
-## 📐 Engineering Philosophy
-
-> **"Correctness by Construction & Zero-Lookahead Invariants."**  
-> We make illegal states unrepresentable through strict typing, deterministic test harnesses, pure functional cores with imperative shells, and defensive hardware-aligned resource quotas.
-
----
-
-<p align="center">
-  <i>Maintained by Rusdan Lamsa (<a href="https://github.com/gxmngi">@gxmngi</a>)</i>
-</p>
+**Rusdan Lamsa** · Systems & full-stack engineer · IT at Walailak University · Former SWE intern at MFEC · [LinkedIn](https://www.linkedin.com/in/rusdanlamsa/)
