@@ -1,1 +1,1 @@
-![Packet Loss — a pixel cat swats a packet out of the air. Suspect: cat.](assets/packet-loss.gif)
+![แมวพิกเซลปัดซองข้อมูลที่ลอยมาจากเราเตอร์ตกโต๊ะ](assets/packet-cat.gif)
